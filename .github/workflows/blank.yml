@@ -6,7 +6,8 @@ name: Criar uma imagem do docker e enviar ACR
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: tarefas
+    branches: 
+    - tarefas
   pull_request:
     branches: tarefas
 
