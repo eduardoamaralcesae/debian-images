@@ -36,5 +36,8 @@ jobs:
         run: |
           ls -all
           ls -la hello
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cd hello
+          docker build -t sergio24082026cr.azurecr.io/eduardo:v1
+          docker login -u ${{ secrets.UTILIZADOR }} -p ${{ secrets.SEGREDO }} sergio24082026cr.azurecr.io
+          docker push sergio24082026cr.azurecr.io/eduardo:v1
+
